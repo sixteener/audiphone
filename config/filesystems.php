@@ -68,6 +68,19 @@ return [
             'visibility' => 'public',
             'url' => env('APP_URL').'/uploads',
         ],
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => 'ow9gxx758.bkt.clouddn.com', //你的七牛域名
+                'https'     => 'dn-yourdomain.qbox.me',         //你的HTTPS域名
+                'custom'    => 'static.abc.com',                //Useless 没啥用，请直接使用上面的 default 项
+            ],
+            'access_key'=> 'zljRhUlptOqP8Ujt6BTbECIwo3-95QEFuYR2OKP1',  //AccessKey
+            'secret_key'=> 'sRWY9xcnO9zaH032Z2ZTW5xNVm9MXK7qNJUtwi1u',  //SecretKey
+            'bucket'    => 'charge',  //Bucket名字
+            'notify_url'=> '',  //持久化处理回调地址
+            'access'    => 'public'  //空间访问控制 public 或 private
+        ],
     ],
 
 ];

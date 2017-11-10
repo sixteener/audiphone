@@ -160,7 +160,11 @@ return [
         Illuminate\Redis\RedisServiceProvider::class,
         Illuminate\Auth\Passwords\PasswordResetServiceProvider::class,
         Illuminate\Session\SessionServiceProvider::class,
-        Illuminate\Translation\TranslationServiceProvider::class,
+//        Illuminate\Translation\TranslationServiceProvider::class,
+        /*
+         * 修改语言包
+         */
+        Overtrue\LaravelLang\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
@@ -176,8 +180,14 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        // wechat sdk
+        /*
+         * 微信服务端SDK
+         */
         Overtrue\LaravelWeChat\ServiceProvider::class,
+        /*
+         * 七牛云存储
+         */
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
 
     ],
 
